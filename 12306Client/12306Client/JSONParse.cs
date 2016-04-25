@@ -179,6 +179,36 @@ namespace _12306Client
             return dt;
         }
 
+        public static DataTable getPassengers(string response)
+        {
+            response = response.Substring(response.IndexOf("10009636"));
+            response = response.Substring(response.IndexOf("passengers") + 11, response.IndexOf("pageSize") - response.IndexOf("passengers") - 18);
+
+            string[] columnsArray = { "序号", "姓名", "证件类型", "证件号码", "手机/电话", "旅客类型" };
+            DataTable dt = new DataTable();
+            for (int m = 0; m < columnsArray.Length; m++)
+            {
+                dt.Columns.Add(columnsArray[m]);
+            }
+
+            JArray jsonArray = JArray.Parse(response);
+            for (int i = 0; i < jsonArray.Count; i++)
+            {
+                DataRow dr = dt.NewRow();
+
+                dr["序号"] = i + 1;
+                dr["姓名"] = Util.unicode2string(jsonArray[i]["passenger_name"].ToString());
+                dr["证件类型"] = Util.unicode2string(jsonArray[i]["passenger_id_type_name"].ToString());
+                dr["证件号码"] = jsonArray[i]["passenger_id_no"].ToString();
+                dr["手机/电话"] = jsonArray[i]["mobile_no"].ToString();
+                dr["旅客类型"] = Util.unicode2string(jsonArray[i]["passenger_type_name"].ToString());
+
+                dt.Rows.Add(dr);
+            }
+
+            return dt;
+        }
+
         public static string convertToMoney(string param)
         {
             if (!param.Equals("--"))

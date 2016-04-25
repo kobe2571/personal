@@ -70,6 +70,12 @@
     <Compile Include="Frm_SaleSite.Designer.cs">
       <DependentUpon>Frm_SaleSite.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Test.Designer.cs">
+      <DependentUpon>Frm_Test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_TicketPrice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StationInformation.cs" />
+    <Compile Include="Util.cs" />
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_SaleSite.resx">
       <DependentUpon>Frm_SaleSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Test.resx">
+      <DependentUpon>Frm_Test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_TicketPrice.resx">
       <DependentUpon>Frm_TicketPrice.cs</DependentUpon>

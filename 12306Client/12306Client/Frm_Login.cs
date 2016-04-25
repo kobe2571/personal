@@ -32,7 +32,7 @@ namespace _12306Client
             try
             {
                 pb_checkcode.Image = Image.FromStream(stream);
-                MessageBox.Show("刷新成功！", "提 醒", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("刷新成功！", "提 醒", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception)
             {

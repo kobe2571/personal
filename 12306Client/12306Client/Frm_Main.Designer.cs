@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsm_login = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +42,11 @@
             this.tsm_time = new System.Windows.Forms.ToolStripMenuItem();
             this.lbl_userName = new System.Windows.Forms.Label();
             this.lbl_welcome = new System.Windows.Forms.Label();
+            this.dgv_PassengersList = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_PassengersList)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -152,6 +158,48 @@
             this.lbl_welcome.Text = "欢迎你！";
             this.lbl_welcome.Visible = false;
             // 
+            // dgv_PassengersList
+            // 
+            this.dgv_PassengersList.AllowUserToAddRows = false;
+            this.dgv_PassengersList.AllowUserToDeleteRows = false;
+            this.dgv_PassengersList.AllowUserToResizeColumns = false;
+            this.dgv_PassengersList.AllowUserToResizeRows = false;
+            this.dgv_PassengersList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_PassengersList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_PassengersList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_PassengersList.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_PassengersList.Location = new System.Drawing.Point(22, 24);
+            this.dgv_PassengersList.Name = "dgv_PassengersList";
+            this.dgv_PassengersList.ReadOnly = true;
+            this.dgv_PassengersList.RowHeadersVisible = false;
+            this.dgv_PassengersList.RowTemplate.Height = 23;
+            this.dgv_PassengersList.Size = new System.Drawing.Size(1018, 261);
+            this.dgv_PassengersList.TabIndex = 8;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgv_PassengersList);
+            this.groupBox1.Location = new System.Drawing.Point(12, 43);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1060, 303);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "  常用联系人 ";
+            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -160,6 +208,7 @@
             this.Controls.Add(this.lbl_welcome);
             this.Controls.Add(this.lbl_userName);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.groupBox1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Frm_Main";
@@ -167,6 +216,8 @@
             this.Text = "12306客户端";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_PassengersList)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +237,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsm_time;
         private System.Windows.Forms.Label lbl_userName;
         private System.Windows.Forms.Label lbl_welcome;
+        private System.Windows.Forms.DataGridView dgv_PassengersList;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

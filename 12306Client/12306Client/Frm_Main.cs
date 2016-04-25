@@ -39,7 +39,15 @@ namespace _12306Client
                 frmLogin.Close();
                 if (!loginResult.Equals(""))
                 {
-                    MessageBox.Show(loginResult);
+                    lbl_welcome.Visible = true;
+                    lbl_userName.Visible = true;
+                    lbl_userName.Text = Util.getCustomLoginName(loginResult);
+
+                    string url = "https://kyfw.12306.cn/otn/passengers/init";
+                    string data = "_json_att=";
+                    string result = HttpHelper.getResponse(url, "POST", data);
+                    dgv_PassengersList.DataSource = JSONParse.getPassengers(result);
+                    dgv_PassengersList.BackgroundColor = Color.White;
                 }
             }
         }

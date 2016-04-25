@@ -15,3 +15,4 @@ C:\Users\ChenYang\Desktop\12306Client\12306Client\obj\x86\Release\12306Client.ex
 C:\Users\ChenYang\Desktop\12306Client\12306Client\obj\x86\Release\12306Client.pdb
 C:\Users\ChenYang\Desktop\12306Client\12306Client\obj\x86\Release\12306Client.csprojResolveAssemblyReference.cache
 C:\Users\ChenYang\Desktop\12306Client\12306Client\obj\x86\Release\12306Client.csproj.GenerateResource.Cache
+C:\Users\ChenYang\Desktop\12306Client\12306Client\obj\x86\Release\_12306Client.Frm_Test.resources
